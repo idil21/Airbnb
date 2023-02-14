@@ -1,0 +1,14 @@
+#searchBtn:hover{
+ background-color: #FF5A5F;
+}
+.bigImage{
+    width: 560px !important; 
+    aspect-ratio: 1/1;
+}
+.smallImage{
+    width: 280px !important;
+    height: 272px !important;
+}
+.prices{
+    display: none;
+}

@@ -1,0 +1,98 @@
+/* Custom styles here */
+
+/* Use Bootstrap's default font and color scheme */
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css";
+
+/* Add a custom background color to the page */
+body {
+  background-color: #eee;
+}
+
+/* Customize the header and footer styles */
+header,
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.d-flex-a:hover .dropdown-content {display: block;}
+
+.d-flex-a{
+    position:relative;
+    display: inline-block;
+    
+}
+
+/* Customize the font size and weight of the page title */
+h1 {
+ 
+  font-size: 32;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-right :100px;
+  color: inherit !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  padding: 0px !important;
+ 
+}
+h4{
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: rgb(113, 113, 113)
+}
+
+.back-button {
+  margin-right: auto;
+}
+/* Customize the button styles */
+.btn-primary {
+  background-color: #00b3e3;
+  border-color: #00b3e3;
+  color: #fff;
+}
+
+/* Customize the card styles */
+.card {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+/* Customize the image styles */
+.card-img-top {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* Customize the form styles */
+form {
+  margin-top: 1rem;
+ 
+}
+
+.new {
+  margin-top: 0px;
+  margin-left:200px;
+  padding: 2px;
+  max-width: 400px;
+  max-height: 400px;
+  
+}
+
+.card {
+  float: right;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 400px;
+  height: 500px;
+  border-radius: 25px;
+  margin-top:52px;
+  
+}

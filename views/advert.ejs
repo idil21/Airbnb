@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/home.css" />
+    <link rel="stylesheet" href="/public/listing.css" />
+
+    <title>İlan</title>
+  </head>
+  <body>
+    <header>
+      <!--logolu container kısmı-->
+
+      <nav class="navbar sticky-top">
+        <div
+          class="container-fluid ps-5 pe-5 pt-2 pb-2"
+          id="container"
+          style="background-color: #f8f9fa; margin-top: 0px"
+        >
+          <a class="navbar-brand" href="/">
+            <svg
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+              width="102"
+              height="32"
+              style="display: block"
+            >
+              <path
+                d="M29.3864 22.7101C29.2429 22.3073 29.0752 21.9176 28.9157 21.5565C28.6701 21.0011 28.4129 20.4446 28.1641 19.9067L28.1444 19.864C25.9255 15.0589 23.5439 10.1881 21.0659 5.38701L20.9607 5.18316C20.7079 4.69289 20.4466 4.18596 20.1784 3.68786C19.8604 3.0575 19.4745 2.4636 19.0276 1.91668C18.5245 1.31651 17.8956 0.833822 17.1853 0.502654C16.475 0.171486 15.7005 -9.83959e-05 14.9165 4.23317e-08C14.1325 9.84805e-05 13.3581 0.171877 12.6478 0.503224C11.9376 0.834571 11.3088 1.31742 10.8059 1.91771C10.3595 2.46476 9.97383 3.05853 9.65572 3.68858C9.38521 4.19115 9.12145 4.70278 8.8664 5.19757L8.76872 5.38696C6.29061 10.1884 3.90903 15.0592 1.69015 19.8639L1.65782 19.9338C1.41334 20.463 1.16057 21.0102 0.919073 21.5563C0.75949 21.9171 0.592009 22.3065 0.448355 22.7103C0.0369063 23.8104 -0.094204 24.9953 0.0668098 26.1585C0.237562 27.334 0.713008 28.4447 1.44606 29.3804C2.17911 30.3161 3.14434 31.0444 4.24614 31.4932C5.07835 31.8299 5.96818 32.002 6.86616 32C7.14824 31.9999 7.43008 31.9835 7.71027 31.9509C8.846 31.8062 9.94136 31.4366 10.9321 30.8639C12.2317 30.1338 13.5152 29.0638 14.9173 27.5348C16.3194 29.0638 17.6029 30.1338 18.9025 30.8639C19.8932 31.4367 20.9886 31.8062 22.1243 31.9509C22.4045 31.9835 22.6864 31.9999 22.9685 32C23.8664 32.002 24.7561 31.8299 25.5883 31.4932C26.6901 31.0444 27.6554 30.3161 28.3885 29.3804C29.1216 28.4447 29.5971 27.3341 29.7679 26.1585C29.9287 24.9952 29.7976 23.8103 29.3864 22.7101ZM14.9173 24.377C13.1816 22.1769 12.0678 20.1338 11.677 18.421C11.5169 17.7792 11.4791 17.1131 11.5656 16.4573C11.6339 15.9766 11.8105 15.5176 12.0821 15.1148C12.4163 14.6814 12.8458 14.3304 13.3374 14.0889C13.829 13.8475 14.3696 13.7219 14.9175 13.7219C15.4655 13.722 16.006 13.8476 16.4976 14.0892C16.9892 14.3307 17.4186 14.6817 17.7528 15.1151C18.0244 15.5181 18.201 15.9771 18.2693 16.4579C18.3556 17.114 18.3177 17.7803 18.1573 18.4223C17.7661 20.1349 16.6526 22.1774 14.9173 24.377ZM27.7406 25.8689C27.6212 26.6908 27.2887 27.4674 26.7762 28.1216C26.2636 28.7759 25.5887 29.2852 24.8183 29.599C24.0393 29.9111 23.1939 30.0217 22.3607 29.9205C21.4946 29.8089 20.6599 29.5239 19.9069 29.0824C18.7501 28.4325 17.5791 27.4348 16.2614 25.9712C18.3591 23.3846 19.669 21.0005 20.154 18.877C20.3723 17.984 20.4196 17.0579 20.2935 16.1475C20.1791 15.3632 19.8879 14.615 19.4419 13.9593C18.9194 13.2519 18.2378 12.6768 17.452 12.2805C16.6661 11.8842 15.798 11.6777 14.9175 11.6777C14.0371 11.6777 13.1689 11.8841 12.383 12.2803C11.5971 12.6765 10.9155 13.2515 10.393 13.9589C9.94707 14.6144 9.65591 15.3624 9.5414 16.1465C9.41524 17.0566 9.4623 17.9822 9.68011 18.8749C10.1648 20.9993 11.4748 23.384 13.5732 25.9714C12.2555 27.4348 11.0845 28.4325 9.92769 29.0825C9.17468 29.5239 8.34007 29.809 7.47395 29.9205C6.64065 30.0217 5.79525 29.9111 5.0162 29.599C4.24581 29.2852 3.57092 28.7759 3.05838 28.1217C2.54585 27.4674 2.21345 26.6908 2.09411 25.8689C1.97932 25.0334 2.07701 24.1825 2.37818 23.3946C2.49266 23.0728 2.62663 22.757 2.7926 22.3818C3.0274 21.851 3.27657 21.3115 3.51759 20.7898L3.54996 20.7197C5.75643 15.9419 8.12481 11.0982 10.5894 6.32294L10.6875 6.13283C10.9384 5.64601 11.1979 5.14267 11.4597 4.6563C11.7101 4.15501 12.0132 3.68171 12.3639 3.2444C12.6746 2.86903 13.0646 2.56681 13.5059 2.35934C13.9473 2.15186 14.4291 2.04426 14.9169 2.04422C15.4047 2.04418 15.8866 2.15171 16.3279 2.35911C16.7693 2.56651 17.1593 2.86867 17.4701 3.24399C17.821 3.68097 18.1242 4.15411 18.3744 4.65538C18.6338 5.13742 18.891 5.63623 19.1398 6.11858L19.2452 6.32315C21.7097 11.0979 24.078 15.9415 26.2847 20.7201L26.3046 20.7631C26.5498 21.2936 26.8033 21.8419 27.042 22.382C27.2082 22.7577 27.3424 23.0738 27.4566 23.3944C27.7576 24.1824 27.8553 25.0333 27.7406 25.8689Z"
+                fill="#FF385C"
+              ></path>
+              <path
+                d="M41.6847 24.1196C40.8856 24.1196 40.1505 23.9594 39.4792 23.6391C38.808 23.3188 38.2327 22.8703 37.7212 22.2937C37.2098 21.7172 36.8263 21.0445 36.5386 20.3078C36.2509 19.539 36.123 18.7062 36.123 17.8093C36.123 16.9124 36.2829 16.0475 36.5705 15.2787C36.8582 14.51 37.2737 13.8373 37.7852 13.2287C38.2966 12.6521 38.9039 12.1716 39.6071 11.8513C40.3103 11.531 41.0455 11.3708 41.8765 11.3708C42.6756 11.3708 43.3788 11.531 44.0181 11.8833C44.6574 12.2037 45.1688 12.6841 45.5843 13.2927L45.6802 11.7232H48.6209V23.7992H45.6802L45.5843 22.0375C45.1688 22.6781 44.6254 23.1906 43.9222 23.575C43.2829 23.9274 42.5158 24.1196 41.6847 24.1196ZM42.4519 21.2367C43.0272 21.2367 43.5386 21.0765 44.0181 20.7882C44.4656 20.4679 44.8172 20.0515 45.1049 19.539C45.3606 19.0265 45.4884 18.4179 45.4884 17.7452C45.4884 17.0725 45.3606 16.4639 45.1049 15.9514C44.8492 15.4389 44.4656 15.0225 44.0181 14.7022C43.5706 14.3818 43.0272 14.2537 42.4519 14.2537C41.8765 14.2537 41.3651 14.4139 40.8856 14.7022C40.4382 15.0225 40.0866 15.4389 39.7989 15.9514C39.5432 16.4639 39.4153 17.0725 39.4153 17.7452C39.4153 18.4179 39.5432 19.0265 39.7989 19.539C40.0546 20.0515 40.4382 20.4679 40.8856 20.7882C41.3651 21.0765 41.8765 21.2367 42.4519 21.2367ZM53.6392 8.4559C53.6392 8.80825 53.5753 9.12858 53.4154 9.38483C53.2556 9.64109 53.0319 9.86531 52.7442 10.0255C52.4565 10.1856 52.1369 10.2497 51.8173 10.2497C51.4976 10.2497 51.178 10.1856 50.8903 10.0255C50.6026 9.86531 50.3789 9.64109 50.2191 9.38483C50.0592 9.09654 49.9953 8.80825 49.9953 8.4559C49.9953 8.10355 50.0592 7.78323 50.2191 7.52697C50.3789 7.23868 50.6026 7.04649 50.8903 6.88633C51.178 6.72617 51.4976 6.66211 51.8173 6.66211C52.1369 6.66211 52.4565 6.72617 52.7442 6.88633C53.0319 7.04649 53.2556 7.27072 53.4154 7.52697C53.5433 7.78323 53.6392 8.07152 53.6392 8.4559ZM50.2191 23.7672V11.6911H53.4154V23.7672H50.2191V23.7672ZM61.9498 14.8623V14.8943C61.79 14.8303 61.5982 14.7982 61.4383 14.7662C61.2466 14.7342 61.0867 14.7342 60.895 14.7342C60 14.7342 59.3287 14.9904 58.8812 15.535C58.4018 16.0795 58.178 16.8483 58.178 17.8413V23.7672H54.9817V11.6911H57.9223L58.0182 13.517C58.3379 12.8763 58.7214 12.3958 59.2648 12.0435C59.7762 11.6911 60.3835 11.531 61.0867 11.531C61.3105 11.531 61.5342 11.563 61.726 11.595C61.8219 11.6271 61.8858 11.6271 61.9498 11.6591V14.8623ZM63.2283 23.7672V6.72617H66.4247V13.2287C66.8722 12.6521 67.3836 12.2036 68.0229 11.8513C68.6622 11.531 69.3654 11.3388 70.1645 11.3388C70.9635 11.3388 71.6987 11.4989 72.3699 11.8193C73.0412 12.1396 73.6165 12.588 74.128 13.1646C74.6394 13.7412 75.0229 14.4139 75.3106 15.1506C75.5983 15.9194 75.7261 16.7522 75.7261 17.6491C75.7261 18.546 75.5663 19.4109 75.2787 20.1796C74.991 20.9484 74.5755 21.6211 74.064 22.2297C73.5526 22.8063 72.9453 23.2867 72.2421 23.6071C71.5389 23.9274 70.8037 24.0875 69.9727 24.0875C69.1736 24.0875 68.4704 23.9274 67.8311 23.575C67.1918 23.2547 66.6804 22.7742 66.2649 22.1656L66.169 23.7352L63.2283 23.7672ZM69.3973 21.2367C69.9727 21.2367 70.4841 21.0765 70.9635 20.7882C71.411 20.4679 71.7626 20.0515 72.0503 19.539C72.306 19.0265 72.4339 18.4179 72.4339 17.7452C72.4339 17.0725 72.306 16.4639 72.0503 15.9514C71.7626 15.4389 71.411 15.0225 70.9635 14.7022C70.5161 14.3818 69.9727 14.2537 69.3973 14.2537C68.822 14.2537 68.3106 14.4139 67.8311 14.7022C67.3836 15.0225 67.032 15.4389 66.7443 15.9514C66.4886 16.4639 66.3608 17.0725 66.3608 17.7452C66.3608 18.4179 66.4886 19.0265 66.7443 19.539C67 20.0515 67.3836 20.4679 67.8311 20.7882C68.3106 21.0765 68.822 21.2367 69.3973 21.2367ZM76.9408 23.7672V11.6911H79.8814L79.9773 13.2607C80.3289 12.6841 80.8084 12.2357 81.4157 11.8833C82.023 11.531 82.7262 11.3708 83.5253 11.3708C84.4203 11.3708 85.1874 11.595 85.8267 12.0115C86.4979 12.4279 87.0094 13.0365 87.361 13.8053C87.7126 14.574 87.9043 15.5029 87.9043 16.56V23.7992H84.708V16.9764C84.708 16.1436 84.5162 15.4709 84.1326 14.9904C83.7491 14.51 83.2376 14.2537 82.5664 14.2537C82.0869 14.2537 81.6714 14.3498 81.2878 14.574C80.9362 14.7982 80.6486 15.0865 80.4248 15.503C80.2011 15.8873 80.1052 16.3678 80.1052 16.8483V23.7672H76.9408V23.7672ZM89.5025 23.7672V6.72617H92.6989V13.2287C93.1464 12.6521 93.6578 12.2036 94.2971 11.8513C94.9364 11.531 95.6396 11.3388 96.4387 11.3388C97.2378 11.3388 97.9729 11.4989 98.6442 11.8193C99.3154 12.1396 99.8907 12.588 100.402 13.1646C100.914 13.7412 101.297 14.4139 101.585 15.1506C101.873 15.9194 102 16.7522 102 17.6491C102 18.546 101.841 19.4109 101.553 20.1796C101.265 20.9484 100.85 21.6211 100.338 22.2297C99.8268 22.8063 99.2195 23.2867 98.5163 23.6071C97.8131 23.9274 97.0779 24.0875 96.2469 24.0875C95.4478 24.0875 94.7446 23.9274 94.1053 23.575C93.466 23.2547 92.9546 22.7742 92.5391 22.1656L92.4432 23.7352L89.5025 23.7672ZM95.7035 21.2367C96.2788 21.2367 96.7903 21.0765 97.2697 20.7882C97.7172 20.4679 98.0688 20.0515 98.3565 19.539C98.6122 19.0265 98.7401 18.4179 98.7401 17.7452C98.7401 17.0725 98.6122 16.4639 98.3565 15.9514C98.1008 15.4389 97.7172 15.0225 97.2697 14.7022C96.8222 14.3818 96.2788 14.2537 95.7035 14.2537C95.1281 14.2537 94.6167 14.4139 94.1373 14.7022C93.6898 15.0225 93.3382 15.4389 93.0505 15.9514C92.7628 16.4639 92.6669 17.0725 92.6669 17.7452C92.6669 18.4179 92.7948 19.0265 93.0505 19.539C93.3062 20.0515 93.6898 20.4679 94.1373 20.7882C94.6167 21.0765 95.0962 21.2367 95.7035 21.2367Z"
+                fill="#FF385C"
+              ></path>
+            </svg>
+          </a>
+
+          <form action="" method="post" class="d-flex">
+            <input
+              type="search"
+              class="form-control col-lg-6 me-2 rounded-5"
+              name="searchAdvert"
+              id="searchBar"
+              placeholder="Search For Your Dream Place"
+            />
+
+            <button
+              class="btn text-white"
+              style="background-color: #ff5a5f"
+              id="searchBtn"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+
+          <!-- account container-->
+          <div class="d-flex align-items-center">
+            <a href="/evsahibi" class="text-decoration-none link-dark">
+              Ev Sahipliği modu</a
+            >
+            <button type="button" class="btn btn-light">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  height: 16px;
+                  width: 16px;
+                  fill: currentcolor;
+                "
+                width="16"
+                height="16"
+              >
+                <path
+                  d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"
+                  fill="#222222"
+                ></path>
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              class="d-flex-a btn profile shadow rounded-5 border dropbtn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+              <img
+                src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3"
+                alt="profile picture"
+                class="w-50 ms-2 rounded-circle"
+              />
+
+              <div class="dropdown-content">
+                <a href="#"><strong>Sign up</strong></a>
+                <hr class="dashed" />
+                <a href="#">Login</a>
+                <a href="#">Airbnb your home</a>
+                <a href="#">Host an experience</a>
+                <a href="#">Help</a>
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1><%= description %></h1>
+      <span class="d-flex align-items-center justify-content-between">
+        <span class="d-flex">
+          <span id="star-icon" class="pe-1">&#9733;</span>
+
+          <span class="pe-2"> 4.97 &bull;</span>
+          <a href="#">47 değerlendirme</a>
+          <span class="px-2">&bull;</span>
+          <span class="pe-2"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+              />
+            </svg>
+            Süper Ev Sahibi</span
+          >
+          <span class="pe-2">&bull;</span>
+          <span><a href=""><%= address %></a></span>
+        </span>
+
+        <span class="d-flex">
+          <span class="d-flex align-items-center px-2">
+            <svg
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 16px;
+                width: 16px;
+                stroke: currentcolor;
+                stroke-width: 2;
+                overflow: visible;
+              "
+            >
+              <g fill="none">
+                <path d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"></path>
+                <path d="M16 3v23V3z"></path>
+                <path d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"></path>
+              </g>
+            </svg>
+            <a href="" class="ps-2">Paylaş</a>
+          </span>
+          <span class="d-flex align-items-center px-2">
+            <svg
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              role="presentation"
+              focusable="false"
+              style="
+                display: block;
+                fill: none;
+                height: 16px;
+                width: 16px;
+                stroke: currentcolor;
+                stroke-width: 2;
+                overflow: visible;
+              "
+            >
+              <path
+                d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z"
+              ></path>
+            </svg>
+            <a href="" class="ps-2">Kaydet</a>
+          </span>
+        </span>
+      </span>
+
+      <div class="advertPhotos mt-4 d-flex">
+        <img src="<%=  image1 %>" alt="" class="bigImage" />
+        <div class="ms-2">
+          <img src="<%=  image2 %>" alt="" class="smallImage mx-1 my-1" />
+          <img src="<%=  image3 %>" alt="" class="smallImage mx-1 my-1" />
+          <img src="<%=  image4 %>" alt="" class="smallImage mx-1 my-1" />
+          <img src="<%=  image5 %>" alt="" class="smallImage mx-1 my-1" />
+        </div>
+      </div>
+
+      <span class="d-flex justify-content-between align-items-center mt-5">
+        <div class="d-flex flex-column align-self-baseline">
+          <div class="border-bottom d-flex">
+            <span class="advert-details" style="margin-right: 10em">
+              <h4>Tüm Ev &bull; Ev Sahibi: {ilan veren kişi}</h4>
+              <span> <%= num_guests %> Misafir &bull; </span>
+              <span><%= total_bedrooms %> Yatak Odası &bull;</span>
+              <!-- <span>2 Yatak &bull;</span> -->
+              <span><%= total_bathrooms %> Banyo </span>
+            </span>
+            <span class="user-image">
+              <img
+                src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3"
+                alt="user image"
+                class="rounded-5"
+              />
+            </span>
+          </div>
+          <div class="houseAttributes mt-4 d-flex flex-column">
+            <div class="d-flex justify-content-between mb-3">
+              <span class="tvSymbol">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-tv"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"
+                  />
+                </svg>
+
+                <span>
+                  <% if(has_tv == 1){ %> Televizyonu Var <% } else{ %>
+                  Televizyonu Yok <% } %>
+                </span>
+              </span>
+              <span class="kitchenSymbol">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-egg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 15a5 5 0 0 1-5-5c0-1.956.69-4.286 1.742-6.12.524-.913 1.112-1.658 1.704-2.164C7.044 1.206 7.572 1 8 1c.428 0 .956.206 1.554.716.592.506 1.18 1.251 1.704 2.164C12.31 5.714 13 8.044 13 10a5 5 0 0 1-5 5zm0 1a6 6 0 0 0 6-6c0-4.314-3-10-6-10S2 5.686 2 10a6 6 0 0 0 6 6z"
+                  />
+                </svg>
+                <span>
+                  <% if(has_kitchen == 1){ %> Mutfağı Var <% } else{ %> Mutfağı
+                  Yok <% } %>
+                </span>
+              </span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span class="airConSymbol">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-fan"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M10 3c0 1.313-.304 2.508-.8 3.4a1.991 1.991 0 0 0-1.484-.38c-.28-.982-.91-2.04-1.838-2.969a8.368 8.368 0 0 0-.491-.454A5.976 5.976 0 0 1 8 2c.691 0 1.355.117 1.973.332.018.219.027.442.027.668Zm0 5c0 .073-.004.146-.012.217 1.018-.019 2.2-.353 3.331-1.006a8.39 8.39 0 0 0 .57-.361 6.004 6.004 0 0 0-2.53-3.823 9.02 9.02 0 0 1-.145.64c-.34 1.269-.944 2.346-1.656 3.079.277.343.442.78.442 1.254Zm-.137.728a2.007 2.007 0 0 1-1.07 1.109c.525.87 1.405 1.725 2.535 2.377.2.116.402.222.605.317a5.986 5.986 0 0 0 2.053-4.111c-.208.073-.421.14-.641.199-1.264.339-2.493.356-3.482.11ZM8 10c-.45 0-.866-.149-1.2-.4-.494.89-.796 2.082-.796 3.391 0 .23.01.457.027.678A5.99 5.99 0 0 0 8 14c.94 0 1.83-.216 2.623-.602a8.359 8.359 0 0 1-.497-.458c-.925-.926-1.555-1.981-1.836-2.96-.094.013-.191.02-.29.02ZM6 8c0-.08.005-.16.014-.239-1.02.017-2.205.351-3.34 1.007a8.366 8.366 0 0 0-.568.359 6.003 6.003 0 0 0 2.525 3.839 8.37 8.37 0 0 1 .148-.653c.34-1.267.94-2.342 1.65-3.075A1.988 1.988 0 0 1 6 8Zm-3.347-.632c1.267-.34 2.498-.355 3.488-.107.196-.494.583-.89 1.07-1.1-.524-.874-1.406-1.733-2.541-2.388a8.363 8.363 0 0 0-.594-.312 5.987 5.987 0 0 0-2.06 4.106c.206-.074.418-.14.637-.199ZM8 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+                  />
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14Zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16Z"
+                  />
+                </svg>
+                <span>
+                  <% if(has_air_con == 1){ %> Kliması Var <% } else{ %> Kliması
+                  Yok <% } %>
+                </span>
+              </span>
+              <span class="heatingSymbol">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-fire"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"
+                  />
+                </svg>
+                <span>
+                  <% if(has_heating == 1){ %> Isıtması Var <% } else{ %>
+                  Isıtması Yok <% } %>
+                </span>
+              </span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span class="wifiSymbol">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-wifi"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"
+                  />
+                  <path
+                    d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.455 9.455 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091l.016-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"
+                  />
+                </svg>
+                <span>
+                  <% if(has_internet == 1){ %> İnterneti Var <% } else{ %>
+                  İnterneti Yok <% } %>
+                </span>
+              </span>
+            </div>
+          </div>
+          <!--Google map-->
+          <div
+            id="map-container-google-1"
+            class="map-container d-flex justify-content-strech align-items-strech"
+          >
+            <iframe
+              src="https://maps.google.com/maps?q=<%= address %>&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+              class="flex-grow-1"
+              height="250px"
+            ></iframe>
+          </div>
+
+          <!--Google Maps-->
+        </div>
+        <span class="payment-details border shadow p-3 mb-5 bg-body rounded">
+          <span class="price">
+            <span id="34_asaf" class="fw-bold fs-4 pe-1"
+              ><%= price_per_day %> ₺</span
+            >
+            gece
+          </span>
+          <span>&#9733;</span>
+          <span class="pe-2 fw-bold"> 4.97 &bull;</span>
+          <a href="#">5 değerlendirme</a>
+          <div class="dates d-flex mt-3">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                name="girisTarihi"
+                id="girisTarihi"
+                onchange="checkDateFormat(document.getElementById('girisTarihi').value,document.getElementById('cikisTarihi').value)"
+              />
+              <label for="girisTarihi">Giriş Tarihi</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                name="cikisTarihi"
+                id="cikisTarihi"
+                onchange="checkDateFormat(document.getElementById('cikisTarihi').value,document.getElementById('girisTarihi').value)"
+              />
+              <label for="cikisTarihi">Çıkış Tarihi</label>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input class="form-control" id="floatingTextarea" type="text" />
+            <label for="floatingTextarea">Misafir Sayısı</label>
+          </div>
+
+          <div class="d-grid mt-3">
+            <button
+              id="rezerveEtButonu"
+              style="background-color: #ff5a5f"
+              type="button"
+              class="btn text-white"
+              disabled
+              onclick="calculateDateDifference(document.getElementById('cikisTarihi').value,document.getElementById('girisTarihi').value)"
+            >
+              Ücretleri Göster
+            </button>
+          </div>
+
+          <div id="prices" class="prices p-2 mt-3">
+            <div class="d-flex justify-content-between mb-2">
+              <span id="kalmaBedeli"
+                ><%= price_per_day %> ₺ x <span id="nightCount"></span
+              ></span>
+              <span id="kalmaBedeliToplam"></span>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <span>Temizlik ücreti</span>
+              <span id="temizlikBedeli">200 ₺</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Hizmet Bedeli</span>
+              <span id="hizmetBedeli">816 ₺</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between fw-bold">
+              <span>Vergiler Hariç Toplam</span>
+              <span id="toplamBedel"></span>
+            </div>
+            <div class="d-grid mt-3">
+              <a
+                id="goToPayment"
+                style="background-color: #ff5a5f"
+                type="button"
+                class="btn text-white"
+                href="/payment"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Rezervasyon Yap
+              </a>
+            </div>
+          </div>
+        </span>
+      </span>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+
+<section>
+
+    <div class="container d-flex align-items-center">
+      <h1>Confirm and pay</h1>
+    </div>
+
+
+    <div class="container ">
+      <h1 style=" font-size:30px;">Your Trip</h1>
+      <div class="container d-flex">
+        <div class="p-2 w-25">
+          <h2>Dates</h2>
+          <div id="output"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="p-2 w-25  bd-highlight">
+          <h2>Guests
+          </h2>
+          <div id="output2"></div>
+        </div>
+      </div>
+      <hr class="dashed">
+    </div>
+
+    <div class="container d-flex">
+
+      <!--ödeme bilgileri-->
+      <div class="container">
+        <h1 style="font-size: 28px;">
+          Pay With
+        </h1>
+        <span role="img" aria-label="Visa Card"><img
+            src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/legacy-shared/svgs/payments/logo_visa.0adea522bb26bd90821a8fade4911913.svg"
+            alt="Visa Card" height="9" aria-hidden="true"></span>
+        <span role="img" aria-label="American Express Card"><img
+            src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/legacy-shared/svgs/payments/logo_amex.84088b520ca1b3384cb71398095627da.svg"
+            alt="American Express Card" height="9" aria-hidden="true"></span>
+        <span role="img" aria-label="Mastercard"><img
+            src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/legacy-shared/svgs/payments/logo_mastercard.f18379cf1f27d22abd9e9cf44085d149.svg"
+            alt="Mastercard" height="9" aria-hidden="true"></span>
+        <span role="img" aria-label="Google Pay"><img
+            src="https://a0.muscache.com/airbnb/static/packages/assets/frontend/legacy-shared/svgs/payments/logo_googlepay.3f786bc031b59575d24f504dfb859da0.svg"
+            alt="Google Pay" height="9" aria-hidden="true"></span>
+        <form id="payment-form">
+          <div class="form-group">
+            <label for="code">Booking Code</label>
+            <input type="text" class="form-control" id="code" value="HM8P94HMKW">
+          </div>
+          <div class="form-group">
+            <label for="payWith">Pay With</label>
+            <select class="form-control" id="payWith">
+              <option value="credit_card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="cardExpiration">Expiration Date</label>
+              <input type="month" class="form-control" id="cardExpiration">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cardCVV">CVV</label>
+              <input type="text" class="form-control" id="cardCVV" placeholder="Enter CVV">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cardHolderName">Card Holder Name</label>
+            <input type="text" class="form-control" id="cardHolderName" placeholder="Enter card holder name">
+          </div>
+        </form>
+  
+        <hr class="dashed">
+        <h1 style="font-size: 28px;">
+          Cancellation policy</h1>
+        <h1 style="font-size: 14px;">This reservation is non-refundable. Learn more</h4>
+          <hr class="dashed">
+          <h1 style="font-size: 28px;">
+            Ground rules</h1>
+          <h1 style="font-size: 14px;">We ask every guest to remember a few simple things about what makes a great
+            guest.<br>Follow the house rules.<br>Treat your Host’s home like your own
+  
+            </h4>
+            <hr class="dashed">
+            <div style="display:flex;flex-direction:row">
+              <span role="img"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                  role="presentation" focusable="false"
+                  style="display: block; height: 32px; width: 32px; fill: rgb(227, 28, 95); stroke: currentcolor;">
+                  <g>
+                    <g stroke="none">
+                      <path
+                        d="M43 8v21.295L32.295 40l-10.359.001A11.971 11.971 0 0 0 26 31c0-6.627-5.373-12-12-12a12.02 12.02 0 0 0-3.001.378L11 8h32z"
+                        fill-opacity=".2"></path>
+                      <path
+                        d="M32 42v-8a5 5 0 0 1 4.783-4.995L37 29h8V6H34v2h-2V6H22v2h-2V6H9v14.5H7V6a2 2 0 0 1 1.85-1.995L9 4h11V2h2v2h10V2h2v2h11a2 2 0 0 1 1.995 1.85L47 6v24.953L33.953 44H15v-2h17zm12.123-11H37a3 3 0 0 0-2.995 2.824L34 34v7.122L44.123 31z">
+                      </path>
+                    </g>
+                    <g fill="none" stroke-width="2">
+                      <path
+                        d="M14 43c.328 0 .653-.013.974-.039C21.146 42.465 26 37.299 26 31c0-6.627-5.373-12-12-12A11.995 11.995 0 0 0 2 31c0 6.627 5.373 12 12 12z">
+                      </path>
+                      <path d="M23 31h-9v-9"></path>
+                    </g>
+                  </g>
+                </svg></span>
+  
+              <h1 style="font-size: 14px;">
+                Your reservation won’t be confirmed until the Host accepts your request (within 24 hours).</h1>
+            </div>
+            <button type="button" class="btn btn-danger" onclick="validatePaymentForm()">Request to Book</button>
+  
+  
+      </div>
+      <!--pprduct bilgileir-->
+      <div class="container">
+  
+        <div class="card">
+          <div class="card-header" style="display:flex;flex-direction:row">
+            <img class="_6tbg2q d-block " aria-hidden="true" elementtiming="LCP-target" fetchpriority="high"
+              id="FMP-target" loading="eager"
+              src="<%=  image1 %>"
+              data-original-uri="https://a0.muscache.com/im/pictures/e25a9b25-fa98-4160-bfd1-039287bf38b6.jpg?im_w=720"
+              style="border-radius:20px ;object-fit: cover; vertical-align: bottom;width : 160px; height:160">
+  
+            <div style="display:flex;flex-direction:column" class="ms-2">
+              <h3>Castle</h3>
+              <p>Private Group Stay in Exclusive Fairytale Castle</p>
+              <p class="text-muted">5.00 (9 reviews)</h4>
+  
+            </div>
+  
+          </div>
+  
+  
+          <div class="card-body">
+  
+            <div role="img" aria-label="Your booking is protected by AirCover" class="d-flex flex-row align-items-center">
+              Your booking is protected by <div><img
+                  src="https://a0.muscache.com/pictures/aircover/aircover-logo/original/56683a2f-f11b-43f6-8af7-a1b3861b2c85.svg"
+                  alt="AirCover"></div>
+            </div>
+            <hr class="dashed">
+  
+  
+            <h5>Price Details</h5>
+            <table class="table">
+              <tr>
+                <td>Day Price</td>
+                <td><%= price_per_day %> ₺</td>
+              </tr>
+             
+              <tr>
+                <td>Total Days</td>
+                <td><div id="output3"></div></td>
+              </tr>
+              <tr>
+                <td>Total Price</td>
+                <td> <div id="output4"></div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/public/checkDateFormat.js"></script>
+    <script src="/public/calculateDateDifference.js"></script>
+    <script src="/public/payment.js"></script>
+  </body>
+</html>
